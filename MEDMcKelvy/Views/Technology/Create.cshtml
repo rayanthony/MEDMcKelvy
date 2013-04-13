@@ -1,0 +1,59 @@
+﻿@model MEDMcKelvy.Models.Technology
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Technology</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.T_Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.T_Name)
+            @Html.ValidationMessageFor(model => model.T_Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.T_Desc)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.T_Desc)
+            @Html.ValidationMessageFor(model => model.T_Desc)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.T_QOH)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.T_QOH)
+            @Html.ValidationMessageFor(model => model.T_QOH)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.T_URL)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.T_URL)
+            @Html.ValidationMessageFor(model => model.T_URL)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

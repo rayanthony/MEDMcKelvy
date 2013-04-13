@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MEDarchon: @ViewBag.title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Scripts/main.js")
+</head>
+<body>
+    <header>
+        <h1><a href="~/home/index">MED<span>archon</span></a></h1>
+        <h4><i>Office supplies and technology inventory system</i></h4>
+    </header>
+    @RenderBody()
+    
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    <footer><p>MEDarchon hands on interivew
+        <br />by Ray Anthony McKelvy
+            </p></footer>
+    <script>
+        var myTabs = new tabs(document.getElementById("tabs"), "article", "h2").responsive("myTabs", {
+            prev: "Supplies",
+            next: "Technology"
+        });</script>
+
+</body>
+</html>

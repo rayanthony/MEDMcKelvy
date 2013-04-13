@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<section id="tabs">
+<article data-title="Supplies">
+    
+
+          @Html.ActionLink("Add New Supplies", "Create","Supplies") 
+    <br />
+    <h5>-Add a new supply to on hand inventory<br /> <br /></h5>
+     @Html.ActionLink("View supplies on hand","Index","Supplies")
+
+    <br />
+    <h5>-View a list of current supplies on hand</h5><br />
+   
+    
+</article>
+
+    <article data-title="Technology">
+
+            @Html.ActionLink("Add New Technology", "Create","Technology")
+        <br />
+         <h5>-Add new technology to on hand inventory<br /> <br /></h5>
+        @Html.ActionLink("View technology on hand","Index","Technology")
+            <h5>-View a list of current technology on hand</h5>
+        <br />
+
+               
+
+    </article>
+    </section>

@@ -1,0 +1,52 @@
+﻿@*@model MEDMcKelvy.Models.Supplies*@
+@model IEnumerable<MEDMcKelvy.Models.Supplies>
+
+@{
+    ViewBag.Title = "Supplies";
+}
+
+<h2>Supplies</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.S_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_Desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_QOH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_URL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_Desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_QOH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_URL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.S_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.S_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.S_ID })
+        </td>
+    </tr>
+}
+
+</table>

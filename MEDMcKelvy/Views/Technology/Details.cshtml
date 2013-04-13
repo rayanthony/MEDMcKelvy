@@ -1,0 +1,43 @@
+﻿@model MEDMcKelvy.Models.Technology
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Technology</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.T_Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.T_Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.T_Desc)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.T_Desc)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.T_QOH)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.T_QOH)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.T_URL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.T_URL)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.T_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MEDMcKelvy.Models.Technology>
+
+@{
+    ViewBag.Title = "Technology";
+}
+
+<h2>Technology</h2>
+
+<p>
+</p>
+<table id="hor-minimalist-a" summary="Employee Pay Sheet">
+
+    <tr>
+        <th>
+Name
+
+        </th>
+        <th>
+Description
+
+        </th>
+        <th>
+Quantity on hand
+        </th>
+        <th>
+Reorder URL
+
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_Desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_QOH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_URL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.T_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.T_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.T_ID })
+        </td>
+    </tr>
+}
+
+</table>
+
+<h2>@Html.ActionLink("Add to technology","Create")
+</h2>
+    
